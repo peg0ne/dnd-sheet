@@ -65,11 +65,11 @@ input {
 }
 
 .basic-info-row {
-    width: calc(82%/4);
+    width: calc(80%/4);
 }
 
 .basic-info-row2 {
-    width: calc(82%/4);
+    width: calc(80%/4);
 }
 
 .center {
@@ -99,7 +99,7 @@ input {
 }
 
 .stat {
-    width: calc(55%/3);
+    width: calc(50%/3);
 }
 
 .skills {
