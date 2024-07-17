@@ -137,6 +137,11 @@ input {
     width: 100%;
 }
 
+.battle-skill {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 .hpbox {
     display: flex;
     gap: 20px;
