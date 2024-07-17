@@ -7,10 +7,6 @@
     --font: monospace;
 }
 
-button {
-
-}
-
 body {
     width: 90vw;
     padding: 5vw;
@@ -69,11 +65,11 @@ input {
 }
 
 .basic-info-row {
-    width: calc(84%/4);
+    width: calc(82%/4);
 }
 
 .basic-info-row2 {
-    width: calc(84%/4);
+    width: calc(82%/4);
 }
 
 .center {
@@ -103,7 +99,7 @@ input {
 }
 
 .stat {
-    width: calc(60%/3);
+    width: calc(55%/3);
 }
 
 .skills {
@@ -125,7 +121,7 @@ input {
 }
 
 .doubleb {
-    width: 31.6%;
+    width: 31.3%;
     display: grid;
     gap: 10px
 }
