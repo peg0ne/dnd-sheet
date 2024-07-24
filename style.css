@@ -13,25 +13,34 @@ body {
     margin: 0;
 }
 
-body, h1, h2, h3, input {
+body,
+h1,
+h2,
+h3,
+input,
+textarea {
     background-color: var(--background);
     color: var(--text);
     font-family: var(--font);
 }
 
-input {
+input, textarea {
     border-color: transparent;
     border-bottom: 1px solid var(--accent);
     color: var(--text);
     text-decoration: none;
 }
 
-input:focus-visible {
+input:focus-visible, textarea:focus-visible {
     outline-width: 0px;
     outline-style: none;
     border-bottom-color: var(--selected-accent);
     border-bottom-width: 3px;
     animation: search-anim 0.0s;
+}
+
+textarea, a, button {
+    margin-top: 12px;
 }
 
 
@@ -40,6 +49,7 @@ input:focus-visible {
         border-bottom-color: var(--accent);
         border-bottom-width: 1px;
     }
+
     to {
         border-bottom-color: var(--selected-accent);
         border-bottom-width: 3px;
@@ -108,27 +118,39 @@ input {
     gap: 10px
 }
 
+.basic-skill {
+    margin: auto;
+}
+
 .box {
     border: 2px solid var(--sep);
     border-radius: 6px;
     padding: 20px;
 }
 
-.double {
-    display: flex;
-    width: 100%;
-    gap: 10px
+.skill-list-item-name {
+    text-wrap: nowrap;
+    margin: 0px;
+    padding-right: 10px;
+    align-content: center;
 }
 
-.doubleb {
-    width: 31.3%;
-    display: grid;
-    gap: 10px
+.skill-list-item-value {
+    width: 100%;
+    margin: 0px;
+    align-content: center;
+}
+
+.skill-list-item-check {
+    width: auto;
+}
+
+.list-item {
+    display: flex;
 }
 
 .details {
-    display: grid;
-    grid-template-columns: 31.5% 31.5% 31.5%;
+    display: block;
 }
 
 .battle {
@@ -152,4 +174,74 @@ input {
     display: flex;
     gap: 20px;
     width: 100%;
+}
+
+.money {
+    display: flex;
+    gap: 20px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: var(--background);
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid var(--text);
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-input {
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+
+.inventory {
+    margin-top: 20px;
+}
+
+.inventory-div {
+    padding-bottom: 20px;
+}
+
+.inventory-item-div {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    border-bottom: 2px solid var(--accent);
+    text-wrap: balance;
+}
+
+.delete-item {
+    margin-left: auto;
+    height: fit-content;
+    background-color: var(--accent);
+    color: var(--background);
+    border: 0px solid;
+    border-radius: 2px;
 }
