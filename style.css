@@ -245,3 +245,9 @@ input {
     border: 0px solid;
     border-radius: 2px;
 }
+
+.charges {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20%;
+    gap: 5px;
+}
