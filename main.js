@@ -1,8 +1,4 @@
 
-var stats = load_data("dnd-sheet-stats", {});
-function load_data(name, default_data) { return localStorage.getItem(name) ? JSON.parse(localStorage.getItem(name)) : default_data; }
-function save_data(name, data) { localStorage.setItem(name, JSON.stringify(data)); }
-
 var DB = load_data("dnd-data", baseData);
 function saveData() { localStorage.setItem("dnd-data", JSON.stringify(DB)); }
 function getEle(id) { return document.getElementById(id); }
