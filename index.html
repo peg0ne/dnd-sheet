@@ -1,397 +1,660 @@
 <!DOCTYPE html>
 <html lang="en" xml:lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, user-scalable=no"
+        />
+        <title>dnd-sheet</title>
+        <link rel="stylesheet" type="text/css" href="style.css?v=5" />
+    </head>
 
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <title>dnd-sheet</title>
-    <link rel="stylesheet" type="text/css" href="style.css?v=5" />
-</head>
-
-<body>
-    <div class="header block">
-        <div class="char-name-div">
-            <h3>Character Name</h3>
-            <input type="text" class="char-name" id="char-name">
-        </div>
-        <div class="basic-info center">
-            <div class="basic-info-row">
-                <h5>Class</h5>
-                <input type="text" id="char-class">
+    <body>
+        <div class="header block">
+            <div class="char-name-div">
+                <h3>Character Name</h3>
+                <input type="text" class="char-name" id="char-name" />
             </div>
-            <div class="basic-info-row">
-                <h5>Sub-class</h5>
-                <input type="text" id="char-subtypeclass">
+            <div class="basic-info center">
+                <div class="basic-info-row">
+                    <h5>Class</h5>
+                    <input type="text" id="char-class" />
+                </div>
+                <div class="basic-info-row">
+                    <h5>Sub-class</h5>
+                    <input type="text" id="char-subtypeclass" />
+                </div>
+                <div class="basic-info-row">
+                    <h5>Lvl</h5>
+                    <input type="text" id="char-lvl" />
+                </div>
+                <div class="basic-info-row2">
+                    <h5>XP</h5>
+                    <input type="text" id="char-xp" />
+                </div>
             </div>
-            <div class="basic-info-row">
-                <h5>Lvl</h5>
-                <input type="text" id="char-lvl">
-            </div>
-            <div class="basic-info-row2">
-                <h5>XP</h5>
-                <input type="text" id="char-xp">
-            </div>
-        </div>
-        <div class="basic-info center">
-            <div class="basic-info-row2">
-                <h5>Background</h5>
-                <input type="text" id="char-background">
-            </div>
-            <div class="basic-info-row2">
-                <h5>Race</h5>
-                <input type="text" id="char-race">
-            </div>
-            <div class="basic-info-row2">
-                <h5>Alignment</h5>
-                <input type="text" id="char-alignment">
+            <div class="basic-info center">
+                <div class="basic-info-row2">
+                    <h5>Background</h5>
+                    <input type="text" id="char-background" />
+                </div>
+                <div class="basic-info-row2">
+                    <h5>Race</h5>
+                    <input type="text" id="char-race" />
+                </div>
+                <div class="basic-info-row2">
+                    <h5>Alignment</h5>
+                    <input type="text" id="char-alignment" />
+                </div>
             </div>
         </div>
-    </div>
-    <div class="main">
-        <div class="stats center">
-            <h4 class="header text-center" id="hide-stats">⬜ Hide Base Stats</h4>
-        </div>
-        <div id="stats-block-ele" class="stats center block">
-            <div class="stat box center">
-                <h3 class="text-center">Str</h3>
-                <h1 class="text-center" id="stat-mod-str">+2</h1>
-                <input id="stat-str" type="number" name="" id="">
+        <div class="main">
+            <div class="stats center">
+                <h4 class="header text-center" id="hide-stats">
+                    ⬜ Hide Base Stats
+                </h4>
             </div>
-            <div class="stat box center">
-                <h3 class="text-center">Dex</h3>
-                <h1 class="text-center" id="stat-mod-dex">+1</h1>
-                <input id="stat-dex" type="number" name="" id="">
+            <div id="stats-block-ele" class="stats center block">
+                <div class="stat box center">
+                    <h3 class="text-center">Str</h3>
+                    <h1 class="text-center" id="stat-mod-strength">+2</h1>
+                    <input id="stat-strength" type="number" name="" id="" />
+                </div>
+                <div class="stat box center">
+                    <h3 class="text-center">Dex</h3>
+                    <h1 class="text-center" id="stat-mod-dexterity">+1</h1>
+                    <input id="stat-dexterity" type="number" name="" id="" />
+                </div>
+                <div class="stat box center">
+                    <h3 class="text-center">Con</h3>
+                    <h1 class="text-center" id="stat-mod-constitution">+3</h1>
+                    <input id="stat-constitution" type="number" name="" id="" />
+                </div>
+                <div class="stat box center">
+                    <h3 class="text-center">Int</h3>
+                    <h1 class="text-center" id="stat-mod-intelligence">-1</h1>
+                    <input id="stat-intelligence" type="number" name="" id="" />
+                </div>
+                <div class="stat box center">
+                    <h3 class="text-center">Wis</h3>
+                    <h1 class="text-center" id="stat-mod-wisdom">0</h1>
+                    <input id="stat-wisdom" type="number" name="" id="" />
+                </div>
+                <div class="stat box center">
+                    <h3 class="text-center">Cha</h3>
+                    <h1 class="text-center" id="stat-mod-charisma">+1</h1>
+                    <input id="stat-charisma" type="number" name="" id="" />
+                </div>
             </div>
-            <div class="stat box center">
-                <h3 class="text-center">Con</h3>
-                <h1 class="text-center" id="stat-mod-con">+3</h1>
-                <input id="stat-con" type="number" name="" id="">
+            <div class="skills center block">
+                <div class="basic-skill">
+                    <div class="skill list-item">
+                        <h2>Inspiration</h2>
+                        <input
+                            id="skill-inspiration"
+                            type="checkbox"
+                            name=""
+                            id=""
+                        />
+                    </div>
+                    <div class="skill">
+                        <h2>Proficiency Bonus</h2>
+                        <input
+                            id="skill-proficiency"
+                            type="number"
+                            name=""
+                            id=""
+                        />
+                    </div>
+                </div>
+                <div class="basic-skill">
+                    <div class="basic-skill skill list-item">
+                        <input
+                            class="skill-list-item-check"
+                            id="skill-str"
+                            type="checkbox"
+                            name=""
+                            id=""
+                        />
+                        <h2 class="skill-list-item-name">Strength</h2>
+                        <h1 class="skill-list-item-value" id="skill-mod-strength">
+                            +1
+                        </h1>
+                    </div>
+                    <div class="basic-skill skill list-item">
+                        <input
+                            class="skill-list-item-check"
+                            id="skill-dex"
+                            type="checkbox"
+                            name=""
+                            id=""
+                        />
+                        <h2 class="skill-list-item-name">Dexterity</h2>
+                        <h1 class="skill-list-item-value" id="skill-mod-dexterity">
+                            +1
+                        </h1>
+                    </div>
+                    <div class="basic-skill skill list-item">
+                        <input
+                            class="skill-list-item-check"
+                            id="skill-con"
+                            type="checkbox"
+                            name=""
+                            id=""
+                        />
+                        <h2 class="skill-list-item-name">Constitution</h2>
+                        <h1 class="skill-list-item-value" id="skill-mod-constitution">
+                            +1
+                        </h1>
+                    </div>
+                    <div class="basic-skill skill list-item">
+                        <input
+                            class="skill-list-item-check"
+                            id="skill-int"
+                            type="checkbox"
+                            name=""
+                            id=""
+                        />
+                        <h2 class="skill-list-item-name">Intelligence</h2>
+                        <h1 class="skill-list-item-value" id="skill-mod-intelligence">
+                            +1
+                        </h1>
+                    </div>
+                    <div class="basic-skill skill list-item">
+                        <input
+                            class="skill-list-item-check"
+                            id="skill-wis"
+                            type="checkbox"
+                            name=""
+                            id=""
+                        />
+                        <h2 class="skill-list-item-name">Wisdom</h2>
+                        <h1 class="skill-list-item-value" id="skill-mod-wisdom">
+                            +1
+                        </h1>
+                    </div>
+                    <div class="basic-skill skill list-item">
+                        <input
+                            class="skill-list-item-check"
+                            id="skill-cha"
+                            type="checkbox"
+                            name=""
+                            id=""
+                        />
+                        <h2 class="skill-list-item-name">Charisma</h2>
+                        <h1 class="skill-list-item-value" id="skill-mod-charisma">
+                            +1
+                        </h1>
+                    </div>
+                </div>
             </div>
-            <div class="stat box center">
-                <h3 class="text-center">Int</h3>
-                <h1 class="text-center" id="stat-mod-int">-1</h1>
-                <input id="stat-int" type="number" name="" id="">
-            </div>
-            <div class="stat box center">
-                <h3 class="text-center">Wis</h3>
-                <h1 class="text-center" id="stat-mod-wis">0</h1>
-                <input id="stat-wis" type="number" name="" id="">
-            </div>
-            <div class="stat box center">
-                <h3 class="text-center">Cha</h3>
-                <h1 class="text-center" id="stat-mod-cha">+1</h1>
-                <input id="stat-cha" type="number" name="" id="">
-            </div>
-        </div>
-        <div class="skills center block">
-            <div class="basic-skill">
+            <div class="details skills center block">
                 <div class="skill list-item">
-                    <h2>Inspiration</h2>
-                    <input id="skill-inspiration" type="checkbox" name="" id="">
+                    <input
+                        class="skill-list-item-check"
+                        id="skill-acro"
+                        type="checkbox"
+                        name=""
+                        id=""
+                    />
+                    <h4 class="skill-list-item-name">🤸‍♂️ Acrobatics</h4>
+                    <h2 class="skill-list-item-value" id="skill-mod-acro">
+                        +1
+                    </h2>
                 </div>
-                <div class="skill">
-                    <h2>Proficiency Bonus</h2>
-                    <input id="skill-proficiency" type="number" name="" id="">
+                <div class="skill list-item">
+                    <input
+                        class="skill-list-item-check"
+                        id="skill-ani-han"
+                        type="checkbox"
+                        name=""
+                        id=""
+                    />
+                    <h4 class="skill-list-item-name">🐈 Animal handling</h4>
+                    <h2 class="skill-list-item-value" id="skill-mod-ani-han">
+                        +1
+                    </h2>
+                </div>
+                <div class="skill list-item">
+                    <input
+                        class="skill-list-item-check"
+                        id="skill-arcana"
+                        type="checkbox"
+                        name=""
+                        id=""
+                    />
+                    <h4 class="skill-list-item-name">🧙‍♂️ Arcana</h4>
+                    <h2 class="skill-list-item-value" id="skill-mod-arcana">
+                        +1
+                    </h2>
+                </div>
+                <div class="skill list-item">
+                    <input
+                        class="skill-list-item-check"
+                        id="skill-athletics"
+                        type="checkbox"
+                        name=""
+                        id=""
+                    />
+                    <h4 class="skill-list-item-name">🏋️‍♀️ Athletics</h4>
+                    <h2 class="skill-list-item-value" id="skill-mod-athletics">
+                        +1
+                    </h2>
+                </div>
+                <div class="skill list-item">
+                    <input
+                        class="skill-list-item-check"
+                        id="skill-deception"
+                        type="checkbox"
+                        name=""
+                        id=""
+                    />
+                    <h4 class="skill-list-item-name">🦊 Deception</h4>
+                    <h2 class="skill-list-item-value" id="skill-mod-deception">
+                        +1
+                    </h2>
+                </div>
+                <div class="skill list-item">
+                    <input
+                        class="skill-list-item-check"
+                        id="skill-history"
+                        type="checkbox"
+                        name=""
+                        id=""
+                    />
+                    <h4 class="skill-list-item-name">📚 History</h4>
+                    <h2 class="skill-list-item-value" id="skill-mod-history">
+                        +1
+                    </h2>
+                </div>
+                <div class="skill list-item">
+                    <input
+                        class="skill-list-item-check"
+                        id="skill-insight"
+                        type="checkbox"
+                        name=""
+                        id=""
+                    />
+                    <h4 class="skill-list-item-name">🧠 Insight</h4>
+                    <h2 class="skill-list-item-value" id="skill-mod-insight">
+                        +1
+                    </h2>
+                </div>
+                <div class="skill list-item">
+                    <input
+                        class="skill-list-item-check"
+                        id="skill-intimidation"
+                        type="checkbox"
+                        name=""
+                        id=""
+                    />
+                    <h4 class="skill-list-item-name">👻 Intimidation</h4>
+                    <h2
+                        class="skill-list-item-value"
+                        id="skill-mod-intimidation"
+                    >
+                        +1
+                    </h2>
+                </div>
+                <div class="skill list-item">
+                    <input
+                        class="skill-list-item-check"
+                        id="skill-investigation"
+                        type="checkbox"
+                        name=""
+                        id=""
+                    />
+                    <h4 class="skill-list-item-name">🔍 Investigation</h4>
+                    <h2
+                        class="skill-list-item-value"
+                        id="skill-mod-investigation"
+                    >
+                        +1
+                    </h2>
+                </div>
+                <div class="skill list-item">
+                    <input
+                        class="skill-list-item-check"
+                        id="skill-medicine"
+                        type="checkbox"
+                        name=""
+                        id=""
+                    />
+                    <h4 class="skill-list-item-name">💊 Medicine</h4>
+                    <h2 class="skill-list-item-value" id="skill-mod-medicine">
+                        +1
+                    </h2>
+                </div>
+                <div class="skill list-item">
+                    <input
+                        class="skill-list-item-check"
+                        id="skill-nature"
+                        type="checkbox"
+                        name=""
+                        id=""
+                    />
+                    <h4 class="skill-list-item-name">🌲 Nature</h4>
+                    <h2 class="skill-list-item-value" id="skill-mod-nature">
+                        +1
+                    </h2>
+                </div>
+                <div class="skill list-item">
+                    <input
+                        class="skill-list-item-check"
+                        id="skill-perception"
+                        type="checkbox"
+                        name=""
+                        id=""
+                    />
+                    <h4 class="skill-list-item-name">🦅 Perception</h4>
+                    <h2 class="skill-list-item-value" id="skill-mod-perception">
+                        +1
+                    </h2>
+                </div>
+                <div class="skill list-item">
+                    <input
+                        class="skill-list-item-check"
+                        id="skill-performance"
+                        type="checkbox"
+                        name=""
+                        id=""
+                    />
+                    <h4 class="skill-list-item-name">🎤 Performance</h4>
+                    <h2
+                        class="skill-list-item-value"
+                        id="skill-mod-performance"
+                    >
+                        +1
+                    </h2>
+                </div>
+                <div class="skill list-item">
+                    <input
+                        class="skill-list-item-check"
+                        id="skill-persuasion"
+                        type="checkbox"
+                        name=""
+                        id=""
+                    />
+                    <h4 class="skill-list-item-name">😍 Persuasion</h4>
+                    <h2 class="skill-list-item-value" id="skill-mod-persuasion">
+                        +1
+                    </h2>
+                </div>
+                <div class="skill list-item">
+                    <input
+                        class="skill-list-item-check"
+                        id="skill-religion"
+                        type="checkbox"
+                        name=""
+                        id=""
+                    />
+                    <h4 class="skill-list-item-name">✝ Religion</h4>
+                    <h2 class="skill-list-item-value" id="skill-mod-religion">
+                        +1
+                    </h2>
+                </div>
+                <div class="skill list-item">
+                    <input
+                        class="skill-list-item-check"
+                        id="skill-sleight-oh"
+                        type="checkbox"
+                        name=""
+                        id=""
+                    />
+                    <h4 class="skill-list-item-name">🃏 Sleight of hands</h4>
+                    <h2 class="skill-list-item-value" id="skill-mod-sleight-oh">
+                        +1
+                    </h2>
+                </div>
+                <div class="skill list-item">
+                    <input
+                        class="skill-list-item-check"
+                        id="skill-stealth"
+                        type="checkbox"
+                        name=""
+                        id=""
+                    />
+                    <h4 class="skill-list-item-name">🐱‍👤 Stealth</h4>
+                    <h2 class="skill-list-item-value" id="skill-mod-stealth">
+                        +1
+                    </h2>
+                </div>
+                <div class="skill list-item">
+                    <input
+                        class="skill-list-item-check"
+                        id="skill-survival"
+                        type="checkbox"
+                        name=""
+                        id=""
+                    />
+                    <h4 class="skill-list-item-name">⚙ Survival</h4>
+                    <h2 class="skill-list-item-value" id="skill-mod-survival">
+                        +1
+                    </h2>
                 </div>
             </div>
-            <div class="basic-skill">
-                <div class="basic-skill skill list-item">
-                    <input class="skill-list-item-check" id="skill-str" type="checkbox" name="" id="">
-                    <h2 class="skill-list-item-name">Strength</h2>
-                    <h1 class="skill-list-item-value" id="skill-mod-str">+1</h1>
+            <div class="skills center block">
+                <div class="battle center">
+                    <div class="battle-skill skill box center">
+                        <h4>🛡 AC</h4>
+                        <input id="skill-ac" type="number" name="" id="" />
+                    </div>
+                    <div class="battle-skill skill box center">
+                        <h4>👞 Speed</h4>
+                        <input id="skill-speed" type="number" name="" id="" />
+                    </div>
+                    <div class="battle-skill skill box center">
+                        <h5>Initiative</h5>
+                        <h1 class="text-center" id="skill-initiative"></h1>
+                    </div>
                 </div>
-                <div class="basic-skill skill list-item">
-                    <input class="skill-list-item-check" id="skill-dex" type="checkbox" name="" id="">
-                    <h2 class="skill-list-item-name">Dexterity</h2>
-                    <h1 class="skill-list-item-value" id="skill-mod-dex">+1</h1>
+                <div class="hpbox center skill box">
+                    <div>
+                        <h1>💗</h1>
+                        <h3>Max Hp</h3>
+                        <input id="skill-max-hp" type="number" name="" id="" />
+                        <h3>Hp</h3>
+                        <input
+                            id="skill-current-hp"
+                            type="number"
+                            name=""
+                            id=""
+                        />
+                        <h3>Temporary Hp</h3>
+                        <input id="skill-temp-hp" type="number" name="" id="" />
+                    </div>
+                    <div>
+                        <h1>🎲</h1>
+                        <h3>Hp Dice Type</h3>
+                        <input id="skill-hp-dice" type="text" name="" id="" />
+                        <h3>Hp Dice Amount</h3>
+                        <input
+                            id="skill-hp-dice-nr"
+                            type="number"
+                            name=""
+                            id=""
+                        />
+                        <h3>Hp Dice Used</h3>
+                        <input
+                            id="skill-hp-dice-used"
+                            type="number"
+                            name=""
+                            id=""
+                        />
+                    </div>
+                    <a href=""></a>
                 </div>
-                <div class="basic-skill skill list-item">
-                    <input class="skill-list-item-check" id="skill-con" type="checkbox" name="" id="">
-                    <h2 class="skill-list-item-name">Constitution</h2>
-                    <h1 class="skill-list-item-value" id="skill-mod-con">+1</h1>
+                <div class="deathsaves center skill box">
+                    <h2>💀</h2>
+                    <h2>Success</h2>
+                    <div>
+                        <input
+                            id="skill-death-save-1"
+                            type="checkbox"
+                            name=""
+                        />
+                        <input
+                            id="skill-death-save-2"
+                            type="checkbox"
+                            name=""
+                        />
+                        <input
+                            id="skill-death-save-3"
+                            type="checkbox"
+                            name=""
+                        />
+                    </div>
+                    <h2>Fail</h2>
+                    <div>
+                        <input
+                            id="skill-death-fail-1"
+                            type="checkbox"
+                            name=""
+                        />
+                        <input
+                            id="skill-death-fail-2"
+                            type="checkbox"
+                            name=""
+                        />
+                        <input
+                            id="skill-death-fail-3"
+                            type="checkbox"
+                            name=""
+                        />
+                    </div>
                 </div>
-                <div class="basic-skill skill list-item">
-                    <input class="skill-list-item-check" id="skill-int" type="checkbox" name="" id="">
-                    <h2 class="skill-list-item-name">Intelligence</h2>
-                    <h1 class="skill-list-item-value" id="skill-mod-int">+1</h1>
+            </div>
+            <div class="inventory center box">
+                <div class="money center">
+                    <div>
+                        <h4>Copper</h4>
+                        <input id="inventory-copper" type="number" />
+                    </div>
+                    <div>
+                        <h4>Silver</h4>
+                        <input id="inventory-silver" type="number" />
+                    </div>
+                    <div>
+                        <h4>Electro</h4>
+                        <input id="inventory-electro" type="number" />
+                    </div>
+                    <div>
+                        <h4>Gold</h4>
+                        <input id="inventory-gold" type="number" />
+                    </div>
+                    <div>
+                        <h4>Platinum</h4>
+                        <input id="inventory-platinum" type="number" />
+                    </div>
                 </div>
-                <div class="basic-skill skill list-item">
-                    <input class="skill-list-item-check" id="skill-wis" type="checkbox" name="" id="">
-                    <h2 class="skill-list-item-name">Wisdom</h2>
-                    <h1 class="skill-list-item-value" id="skill-mod-wis">+1</h1>
+                <h3>Inventory</h3>
+                <div id="inventory-div" class="inventory-div"></div>
+                <button onclick="addInventoryItem()">
+                    Add Inventory Item
+                </button>
+            </div>
+            <div style="margin-top: 20px" class="weapons center center box">
+                <h3>Weapons</h3>
+                <div id="weapon-div" class="inventory-div"></div>
+                <button onclick="addInventoryWeapon()">Add New Weapon</button>
+            </div>
+            <div style="margin-top: 20px" class="traits center center box">
+                <h3>Features & traits</h3>
+                <div id="trait-div" class="inventory-div"></div>
+                <button onclick="addInventoryTrait()">
+                    Add Feature/Trait
+                </button>
+            </div>
+            <div style="margin-top: 20px" class="spells">
+                <div>
+                    <h3>SpellCasting Ability</h3>
+                    <input type="text" />
+                    <h3>Spell Save DC</h3>
+                    <input type="number" />
+                    <h3>Spell Attack Bonus</h3>
+                    <input type="number" />
                 </div>
-                <div class="basic-skill skill list-item">
-                    <input class="skill-list-item-check" id="skill-cha" type="checkbox" name="" id="">
-                    <h2 class="skill-list-item-name">Charisma</h2>
-                    <h1 class="skill-list-item-value" id="skill-mod-cha">+1</h1>
+                <div>
+                    <h3>Cantrips</h3>
+                    <button>Add Cantrip</button>
+                </div>
+                <div>
+                    <h3>Lvl 1 Spells</h3>
+                    <h4>Spell Slots</h4>
+                    <input type="number" name="" id="" />
+                    <button>Add Spell</button>
+                </div>
+                <div>
+                    <h3>Lvl 2 Spells</h3>
+                    <h4>Spell Slots</h4>
+                    <input type="number" name="" id="" />
+                    <button>Add Spell</button>
+                </div>
+                <div>
+                    <h3>Lvl 3 Spells</h3>
+                    <h4>Spell Slots</h4>
+                    <input type="number" name="" id="" />
+                    <button>Add Spell</button>
+                </div>
+                <div>
+                    <h3>Lvl 4 Spells</h3>
+                    <h4>Spell Slots</h4>
+                    <input type="number" name="" id="" />
+                    <button>Add Spell</button>
+                </div>
+                <div>
+                    <h3>Lvl 5 Spells</h3>
+                    <h4>Spell Slots</h4>
+                    <input type="number" name="" id="" />
+                    <button>Add Spell</button>
+                </div>
+                <div>
+                    <h3>Lvl 6 Spells</h3>
+                    <h4>Spell Slots</h4>
+                    <input type="number" name="" id="" />
+                    <button>Add Spell</button>
+                </div>
+                <div>
+                    <h3>Lvl 7 Spells</h3>
+                    <h4>Spell Slots</h4>
+                    <input type="number" name="" id="" />
+                    <button>Add Spell</button>
+                </div>
+                <div>
+                    <h3>Lvl 8 Spells</h3>
+                    <h4>Spell Slots</h4>
+                    <input type="number" name="" id="" />
+                    <button>Add Spell</button>
+                </div>
+                <div>
+                    <h3>Lvl 9 Spells</h3>
+                    <h4>Spell Slots</h4>
+                    <input type="number" name="" id="" />
+                    <button>Add Spell</button>
                 </div>
             </div>
         </div>
-        <div class="details skills center block">
-            <div class="skill list-item">
-                <input class="skill-list-item-check" id="skill-acro" type="checkbox" name="" id="">
-                <h4 class="skill-list-item-name">🤸‍♂️ Acrobatics</h4>
-                <h2 class="skill-list-item-value" id="skill-mod-acro">+1</h2>
-            </div>
-            <div class="skill list-item">
-                <input class="skill-list-item-check" id="skill-ani-han" type="checkbox" name="" id="">
-                <h4 class="skill-list-item-name">🐈 Animal handling</h4>
-                <h2 class="skill-list-item-value" id="skill-mod-ani-han">+1</h2>
-            </div>
-            <div class="skill list-item">
-                <input class="skill-list-item-check" id="skill-arcana" type="checkbox" name="" id="">
-                <h4 class="skill-list-item-name">🧙‍♂️ Arcana</h4>
-                <h2 class="skill-list-item-value" id="skill-mod-arcana">+1</h2>
-            </div>
-            <div class="skill list-item">
-                <input class="skill-list-item-check" id="skill-athletics" type="checkbox" name="" id="">
-                <h4 class="skill-list-item-name">🏋️‍♀️ Athletics</h4>
-                <h2 class="skill-list-item-value" id="skill-mod-athletics">+1</h2>
-            </div>
-            <div class="skill list-item">
-                <input class="skill-list-item-check" id="skill-deception" type="checkbox" name="" id="">
-                <h4 class="skill-list-item-name">🦊 Deception</h4>
-                <h2 class="skill-list-item-value" id="skill-mod-deception">+1</h2>
-            </div>
-            <div class="skill list-item">
-                <input class="skill-list-item-check" id="skill-history" type="checkbox" name="" id="">
-                <h4 class="skill-list-item-name">📚 History</h4>
-                <h2 class="skill-list-item-value" id="skill-mod-history">+1</h2>
-            </div>
-            <div class="skill list-item">
-                <input class="skill-list-item-check" id="skill-insight" type="checkbox" name="" id="">
-                <h4 class="skill-list-item-name">🧠 Insight</h4>
-                <h2 class="skill-list-item-value" id="skill-mod-insight">+1</h2>
-            </div>
-            <div class="skill list-item">
-                <input class="skill-list-item-check" id="skill-intimidation" type="checkbox" name="" id="">
-                <h4 class="skill-list-item-name">👻 Intimidation</h4>
-                <h2 class="skill-list-item-value" id="skill-mod-intimidation">+1</h2>
-            </div>
-            <div class="skill list-item">
-                <input class="skill-list-item-check" id="skill-investigation" type="checkbox" name="" id="">
-                <h4 class="skill-list-item-name">🔍 Investigation</h4>
-                <h2 class="skill-list-item-value" id="skill-mod-investigation">+1</h2>
-            </div>
-            <div class="skill list-item">
-                <input class="skill-list-item-check" id="skill-medicine" type="checkbox" name="" id="">
-                <h4 class="skill-list-item-name">💊 Medicine</h4>
-                <h2 class="skill-list-item-value" id="skill-mod-medicine">+1</h2>
-            </div>
-            <div class="skill list-item">
-                <input class="skill-list-item-check" id="skill-nature" type="checkbox" name="" id="">
-                <h4 class="skill-list-item-name">🌲 Nature</h4>
-                <h2 class="skill-list-item-value" id="skill-mod-nature">+1</h2>
-            </div>
-            <div class="skill list-item">
-                <input class="skill-list-item-check" id="skill-perception" type="checkbox" name="" id="">
-                <h4 class="skill-list-item-name">🦅 Perception</h4>
-                <h2 class="skill-list-item-value" id="skill-mod-perception">+1</h2>
-            </div>
-            <div class="skill list-item">
-                <input class="skill-list-item-check" id="skill-performance" type="checkbox" name="" id="">
-                <h4 class="skill-list-item-name">🎤 Performance</h4>
-                <h2 class="skill-list-item-value" id="skill-mod-performance">+1</h2>
-            </div>
-            <div class="skill list-item">
-                <input class="skill-list-item-check" id="skill-persuasion" type="checkbox" name="" id="">
-                <h4 class="skill-list-item-name">😍 Persuasion</h4>
-                <h2 class="skill-list-item-value" id="skill-mod-persuasion">+1</h2>
-            </div>
-            <div class="skill list-item">
-                <input class="skill-list-item-check" id="skill-religion" type="checkbox" name="" id="">
-                <h4 class="skill-list-item-name">✝ Religion</h4>
-                <h2 class="skill-list-item-value" id="skill-mod-religion">+1</h2>
-            </div>
-            <div class="skill list-item">
-                <input class="skill-list-item-check" id="skill-sleight-oh" type="checkbox" name="" id="">
-                <h4 class="skill-list-item-name">🃏 Sleight of hands</h4>
-                <h2 class="skill-list-item-value" id="skill-mod-sleight-oh">+1</h2>
-            </div>
-            <div class="skill list-item">
-                <input class="skill-list-item-check" id="skill-stealth" type="checkbox" name="" id="">
-                <h4 class="skill-list-item-name">🐱‍👤 Stealth</h4>
-                <h2 class="skill-list-item-value" id="skill-mod-stealth">+1</h2>
-            </div>
-            <div class="skill list-item">
-                <input class="skill-list-item-check" id="skill-survival" type="checkbox" name="" id="">
-                <h4 class="skill-list-item-name">⚙ Survival</h4>
-                <h2 class="skill-list-item-value" id="skill-mod-survival">+1</h2>
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p id="modal-header">Some text in the Modal..</p>
+                <div id="modal-div"></div>
             </div>
         </div>
-        <div class="skills center block">
-            <div class="battle center">
-                <div class="battle-skill skill box center">
-                    <h4>🛡 AC</h4>
-                    <input id="skill-ac" type="number" name="" id="">
-                </div>
-                <div class="battle-skill skill box center">
-                    <h4>👞 Speed</h4>
-                    <input id="skill-speed" type="number" name="" id="">
-                </div>
-                <div class="battle-skill skill box center">
-                    <h5>Initiative</h5>
-                    <h1 class="text-center" id="skill-initiative"></h1>
-                </div>
-            </div>
-            <div class="hpbox center skill box">
-                <div>
-                    <h1>💗</h1>
-                    <h3>Max Hp</h3>
-                    <input id="skill-max-hp" type="number" name="" id="">
-                    <h3>Hp</h3>
-                    <input id="skill-current-hp" type="number" name="" id="">
-                    <h3>Temporary Hp</h3>
-                    <input id="skill-temp-hp" type="number" name="" id="">
-                </div>
-                <div>
-                    <h1>🎲</h1>
-                    <h3>Hp Dice Type</h3>
-                    <input id="skill-hp-dice" type="text" name="" id="">
-                    <h3>Hp Dice Amount</h3>
-                    <input id="skill-hp-dice-nr" type="number" name="" id="">
-                    <h3>Hp Dice Used</h3>
-                    <input id="skill-hp-dice-used" type="number" name="" id="">
-                </div>
-                <a href=""></a>
-            </div>
-            <div class=" deathsaves center skill box">
-                <h2>💀</h2>
-                <h2>Success</h2>
-                <div>
-                    <input id="skill-death-save-1" type="checkbox" name="">
-                    <input id="skill-death-save-2" type="checkbox" name="">
-                    <input id="skill-death-save-3" type="checkbox" name="">
-                </div>
-                <h2>Fail</h2>
-                <div>
-                    <input id="skill-death-fail-1" type="checkbox" name="">
-                    <input id="skill-death-fail-2" type="checkbox" name="">
-                    <input id="skill-death-fail-3" type="checkbox" name="">
-                </div>
-            </div>
-        </div>
-        <div class="inventory center box">
-            <div class="money center ">
-                <div>
-                    <h4>Copper</h4>
-                    <input id="inventory-cp" type="number">
-                </div>
-                <div>
-                    <h4>Silver</h4>
-                    <input id="inventory-sp" type="number">
-                </div>
-                <div>
-                    <h4>Electro</h4>
-                    <input id="inventory-ep" type="number">
-                </div>
-                <div>
-                    <h4>Gold</h4>
-                    <input id="inventory-gp" type="number">
-                </div>
-                <div>
-                    <h4>Platinum</h4>
-                    <input id="inventory-pp" type="number">
-                </div>
-            </div>
-            <h3>Inventory</h3>
-            <div id="inventory-div" class="inventory-div"></div>
-            <button onclick="add_inventory_item()">Add Inventory Item</button>
-        </div>
-        <div style="margin-top: 20px;" class="weapons center center box">
-            <h3>Weapons</h3>
-            <div id="weapon-div" class="inventory-div"></div>
-            <button onclick="add_inventory_weapon()">Add New Weapon</button>
-        </div>
-        <div style="margin-top: 20px;" class="traits center center box">
-            <h3>Features & traits</h3>
-            <div id="trait-div" class="inventory-div"></div>
-            <button onclick="add_inventory_trait()">Add Feature/Trait</button>
-        </div>
-        <div style="margin-top: 20px;" class="spells">
-            <div>
-                <h3>SpellCasting Ability</h3>
-                <input type="text">
-                <h3>Spell Save DC</h3>
-                <input type="number">
-                <h3>Spell Attack Bonus</h3>
-                <input type="number">
-            </div>
-            <div>
-                <h3>Cantrips</h3>
-                <button>Add Cantrip</button>
-            </div>
-            <div>
-                <h3>Lvl 1 Spells</h3>
-                <h4>Spell Slots</h4>
-                <input type="number" name="" id="">
-                <button>Add Spell</button>
-            </div>
-            <div>
-                <h3>Lvl 2 Spells</h3>
-                <h4>Spell Slots</h4>
-                <input type="number" name="" id="">
-                <button>Add Spell</button>
-            </div>
-            <div>
-                <h3>Lvl 3 Spells</h3>
-                <h4>Spell Slots</h4>
-                <input type="number" name="" id="">
-                <button>Add Spell</button>
-            </div>
-            <div>
-                <h3>Lvl 4 Spells</h3>
-                <h4>Spell Slots</h4>
-                <input type="number" name="" id="">
-                <button>Add Spell</button>
-            </div>
-            <div>
-                <h3>Lvl 5 Spells</h3>
-                <h4>Spell Slots</h4>
-                <input type="number" name="" id="">
-                <button>Add Spell</button>
-            </div>
-            <div>
-                <h3>Lvl 6 Spells</h3>
-                <h4>Spell Slots</h4>
-                <input type="number" name="" id="">
-                <button>Add Spell</button>
-            </div>
-            <div>
-                <h3>Lvl 7 Spells</h3>
-                <h4>Spell Slots</h4>
-                <input type="number" name="" id="">
-                <button>Add Spell</button>
-            </div>
-            <div>
-                <h3>Lvl 8 Spells</h3>
-                <h4>Spell Slots</h4>
-                <input type="number" name="" id="">
-                <button>Add Spell</button>
-            </div>
-            <div>
-                <h3>Lvl 9 Spells</h3>
-                <h4>Spell Slots</h4>
-                <input type="number" name="" id="">
-                <button>Add Spell</button>
-            </div>
-        </div>
-    </div>
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <p id="modal-header">Some text in the Modal..</p>
-            <div id="modal-div"></div>
-        </div>
-    </div>
-</body>
-<script src="main.js"></script>
-<script src="modal.js"></script>
-<script src="skills.js"></script>
-<script src="stats.js"></script>
-<script src="info.js"></script>
-<script src="battleinfo.js"></script>
-<script src="visibility.js"></script>
-<script src="inventory.js"></script>
-
+    </body>
+    <script src="src/data.js"></script>
+    <script src="main.js"></script>
+    <script src="src/modal.js"></script>
+    <script src="src/visibility.js"></script>
+    <script src="src/info.js"></script>
+    <script src="src/baseskills.js"></script>
+    <script src="src/advancedskills.js"></script>
+    <script src="src/money.js"></script>
+    <script src="src/battleinfo.js"></script>
+    <script src="src/sharedinventory.js"></script>
+    <script src="src/items.js"></script>
+    <script src="src/weapons.js"></script>
+    <script src="src/traits.js"></script>
+    <script src="stats.js"></script>
 </html>

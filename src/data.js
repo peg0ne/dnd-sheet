@@ -1,0 +1,93 @@
+var baseData = {
+    hasInspiration: false,
+    visibility: {
+        stats: true,
+    },
+    info: {
+        playerName: "",
+        class: "",
+        subTypeClass: "",
+        race: "",
+        alignment: "",
+        background: "",
+        lvl: 1,
+        xp: 0,
+    },
+    battleStats: {
+        armorClass: 0,
+        initiative: 0,
+        speed: 0,
+        hp: {
+            maxHp: 0,
+            currentHp: 0,
+            tempHp: 0,
+            hpDice: "",
+            hpDiceAmount: 0,
+            hpDiceUsed: 0,
+        },
+        deathSaves: {
+            fails: 0,
+            success: 0,
+        },
+    },
+    inventory: {
+        currency: {
+            copper: 0,
+            silver: 0,
+            electro: 0,
+            gold: 0,
+            platinum: 0,
+        },
+        items: [],
+        weapons: [],
+        traits: [],
+        spells: [],
+    },
+    stats: {
+        proficency: 0,
+        strength: {
+            value: 0,
+            isProficient: false,
+        },
+        dexterity: {
+            value: 0,
+            isProficient: false,
+        },
+        constitution: {
+            value: 0,
+            isProficient: false,
+        },
+        intelligence: {
+            value: 0,
+            isProficient: false,
+        },
+        wisdom: {
+            value: 0,
+            isProficient: false,
+        },
+        charisma: {
+            value: 0,
+            isProficient: false,
+        },
+    },
+    statSkills: {
+        acrobatics: false,
+        animalHandling: false,
+        arcana: false,
+        athletics: false,
+        deception: false,
+        history: false,
+        insight: false,
+        intimidation: false,
+        investigation: false,
+        medicine: false,
+        nature: false,
+        perception: false,
+        performance: false,
+        persuasion: false,
+        religion: false,
+        sleightOfHands: false,
+        stealth: false,
+        survival: false,
+    },
+};
